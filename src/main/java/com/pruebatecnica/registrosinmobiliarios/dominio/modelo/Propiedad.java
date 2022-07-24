@@ -6,17 +6,15 @@ public class Propiedad {
     private Id id;
     private String nombre;
     private String direccion;
-    private LocalDateTime fechaInicioContrato;
     private Id idArrendador;
 
     public Propiedad() {
     }
 
-    public Propiedad(Id id, String nombre, String direccion, LocalDateTime fechaInicioContrato, Id idArrendador) {
+    public Propiedad(Id id, String nombre, String direccion, Id idArrendador) {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
-        this.fechaInicioContrato = fechaInicioContrato;
         this.idArrendador = idArrendador;
     }
 
@@ -42,14 +40,6 @@ public class Propiedad {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
-    }
-
-    public LocalDateTime getFechaInicioContrato() {
-        return fechaInicioContrato;
-    }
-
-    public void setFechaInicioContrato(LocalDateTime fechaInicioContrato) {
-        this.fechaInicioContrato = fechaInicioContrato;
     }
 
     public Id getIdArrendador() {

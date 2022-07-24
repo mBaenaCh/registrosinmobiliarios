@@ -1,20 +1,24 @@
 package com.pruebatecnica.registrosinmobiliarios.dominio.modelo;
 
+import java.util.List;
+
 public class Persona {
 
     private Id id;
     private String nombre;
     private String apellidos;
     private String correo;
+    private List<Propiedad> historialPropiedades;
 
     public Persona() {
     }
 
-    public Persona(Id id, String nombre, String apellidos, String correo) {
+    public Persona(Id id, String nombre, String apellidos, String correo, List<Propiedad> historialPropiedades) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
+        this.historialPropiedades = historialPropiedades;
     }
 
     public Id getId() {
