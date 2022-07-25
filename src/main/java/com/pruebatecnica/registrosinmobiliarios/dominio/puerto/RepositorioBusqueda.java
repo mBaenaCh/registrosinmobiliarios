@@ -8,4 +8,6 @@ public interface RepositorioBusqueda {
 
     List<Persona> obtenerArrendatariosPropiedad(String nombrePropiedad);
     List<Persona> obtenerTodosLosArrendatarios();
+
+    List<String> obtenerNombresPropiedades();
 }

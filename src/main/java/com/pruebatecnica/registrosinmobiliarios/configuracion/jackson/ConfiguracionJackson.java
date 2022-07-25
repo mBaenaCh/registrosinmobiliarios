@@ -1,4 +1,4 @@
-package com.pruebatecnica.registrosinmobiliarios.aplicacion.configuracion.jackson;
+package com.pruebatecnica.registrosinmobiliarios.configuracion.jackson;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;

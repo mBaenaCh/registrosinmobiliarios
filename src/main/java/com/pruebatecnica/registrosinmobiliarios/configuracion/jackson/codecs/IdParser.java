@@ -1,4 +1,4 @@
-package com.pruebatecnica.registrosinmobiliarios.aplicacion.configuracion.jackson.codecs;
+package com.pruebatecnica.registrosinmobiliarios.configuracion.jackson.codecs;
 
 import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonGenerator;
