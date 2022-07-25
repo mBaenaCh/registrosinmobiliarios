@@ -6,15 +6,14 @@ import com.pruebatecnica.registrosinmobiliarios.dominio.modelo.Propiedad;
 import com.pruebatecnica.registrosinmobiliarios.dominio.puerto.RepositorioBusqueda;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+import org.springframework.stereotype.Repository;
 import java.util.List;
 
+@Repository
 public class RepositorioArrendatariosMySQL implements RepositorioBusqueda {
 
     private static final String QUERY_HISTORIAL_PROPIEDADES_ARRENDATARIO =
-            "SELECT id_propiedad, nombre_propiedad, direccion, persona_id " +
+            "SELECT id_propiedad, nombre_propiedad, direccion, id_persona " +
                     "FROM propiedades " +
                     "INNER JOIN persona " +
                     "ON propiedades.id_persona = persona.id";

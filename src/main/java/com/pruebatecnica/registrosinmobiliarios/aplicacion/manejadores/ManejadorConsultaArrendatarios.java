@@ -1,10 +1,9 @@
 package com.pruebatecnica.registrosinmobiliarios.aplicacion.manejadores;
 
 import com.pruebatecnica.registrosinmobiliarios.dominio.modelo.Persona;
-import com.pruebatecnica.registrosinmobiliarios.dominio.puerto.RepositorioBusqueda;
 import com.pruebatecnica.registrosinmobiliarios.dominio.servicio.ServicioBusquedaArrendatarios;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 import java.util.Optional;
