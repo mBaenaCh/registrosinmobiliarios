@@ -4,11 +4,13 @@ import com.pruebatecnica.registrosinmobiliarios.aplicacion.manejadores.Manejador
 import com.pruebatecnica.registrosinmobiliarios.dominio.modelo.Persona;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -27,6 +29,10 @@ public class RestBusquerdaArrendatarios {
     public ResponseEntity<List<Persona>> consultarArrendatarios(
             @PathVariable("nombre") String nombrePropiedad){
         try{
+            if(manejadorConsultaArrendatarios.buscarArrendatarios(nombrePropiedad).isEmpty()){
+                return ResponseEntity.status(HttpStatus.OK)
+                        .body(Collections.emptyList());
+            }
             return ResponseEntity.status(HttpStatus.OK)
                     .body(manejadorConsultaArrendatarios.buscarArrendatarios(nombrePropiedad).get());
 

@@ -7,5 +7,5 @@ import java.util.List;
 public interface RepositorioBusqueda {
 
     List<Persona> obtenerArrendatariosPropiedad(String nombrePropiedad);
-
+    List<Persona> obtenerTodosLosArrendatarios();
 }

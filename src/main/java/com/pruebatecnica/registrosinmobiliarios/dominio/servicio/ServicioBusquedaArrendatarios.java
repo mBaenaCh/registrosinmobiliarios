@@ -15,11 +15,13 @@ public class ServicioBusquedaArrendatarios {
     }
 
     public Optional<List<Persona>> buscarArrendatarios(String nombrePropiedad){
-        Optional<List<Persona>> encontrados = Optional.of(
-                repositorioBusqueda.obtenerArrendatariosPropiedad(nombrePropiedad)
-        );
 
-        return encontrados;
+        if(nombrePropiedad.isBlank()){
+            return Optional.of(repositorioBusqueda.obtenerTodosLosArrendatarios());
+        }
+
+        return  Optional.of(repositorioBusqueda.obtenerArrendatariosPropiedad(nombrePropiedad));
+
     }
 
 }

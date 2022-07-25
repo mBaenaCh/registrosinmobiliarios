@@ -26,6 +26,12 @@ public class RepositorioArrendatariosMySQL implements RepositorioBusqueda {
                     "ON propiedades.id_persona = persona.id " +
                     "WHERE nombre_propiedad = ?";
 
+    private static final String QUERY_TODOS_LOS_ARRENDATARIOS =
+            "SELECT id, nombre, apellidos, correo " +
+                    "FROM propiedades " +
+                    "INNER JOIN persona " +
+                    "ON propiedades.id_persona = persona.id";
+
     private final JdbcTemplate jdbcTemplate;
 
     //TODO Implementacion rowmappers externa
@@ -68,6 +74,10 @@ public class RepositorioArrendatariosMySQL implements RepositorioBusqueda {
 
     public List<Persona> obtenerArrendatariosPropiedad(String nombrePropiedad){
         return jdbcTemplate.query(QUERY_HISTORIAL_ARRENDATARIOS_PROPIEDAD, arrendatarioRowMapper, nombrePropiedad);
+    }
+
+    public List<Persona> obtenerTodosLosArrendatarios(){
+        return jdbcTemplate.query(QUERY_TODOS_LOS_ARRENDATARIOS, arrendatarioRowMapper);
     }
 
 }
