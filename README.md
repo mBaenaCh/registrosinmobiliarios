@@ -1,9 +1,9 @@
-# registrosinmobiliarios
+# Registros inmobiliarios
 
 ## Estructura proyecto
 
 ```text
-Marketplace
+registrosinmobiliarios
 └───configuracion       Definiciones de beans de configuracion de base de datos, CORS y parseo entidades
 │   └───jackson         parseo de clases para su serializacion y deserializacion segun nuestro gusto
 │  
