@@ -1,6 +1,6 @@
 # Registros inmobiliarios
 
-Proyecto en springboot, con Java 11, que define una API REST para la definicion de servicios que permiten consultar listas de las propiedades guardadas en la base de datos.
+Proyecto en springboot, con Java 11, que define una API REST para la definicion de servicios que permiten consultar listas de las propiedades guardadas en la base de datos. No desplegue el proyecto debido a que no contaba con servicio en la nube para desplegar una base de datos MySQL (Licencias de AWS y Azure vencidas 😥)
 
 Se define un archivo `docker-compose.yml` para definir un componente de base de datos local MySQL y un gestor de base de datos con Adminer. Este archivo define ademas una base de datos por defecto llamada `inmobiliapp`.
 
@@ -48,5 +48,21 @@ registrosinmobiliarios
 | GET      | /api/propiedades/       | Obtener el nombre de todas las propiedades registradas   |
 | GET   | /api/arrendatarios/:nombre        | Obtener arrendatarios asociados al nombre de una propiedad      |
 
+## Docker compose 
 
-## 
+| Servicios     | Imagen | Ruta     |
+| :----:        | :----:   |:---- |
+| db      | MySQL       | localhost:3306   |
+| adminer   | Adminer        | localhost:8081      |
+
+
+## Requisitos
+- IDE de preferencia
+- JDK 11
+- Gradle 5.0+
+
+## Como correr el proyecto
+
+- Clonar el repositorio
+- Abrir el proyecto con su IDE de preferencia
+- Configurar el proyecto, desde el IDE para correr este con un JDK 11
